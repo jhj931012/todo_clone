@@ -2,7 +2,7 @@ package com.example.todo.userapi.repository;
 
 import com.example.todo.userapi.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
+
 
 public interface UserRepository extends JpaRepository<UserEntity, String> {
 
