@@ -22,6 +22,7 @@ public class TodoService {
 
     private final TodoRepository todoRepository;
 
+
     // 할 일 목록 조회
     public TodoListResponseDTO retrieve() {
         List<TodoEntity> entityList = todoRepository.findAll();
@@ -64,6 +65,7 @@ public class TodoService {
     // 할 일 삭제
     public TodoListResponseDTO delete(final String id) {
 
+
         try {
             todoRepository.deleteById(id);
         } catch (Exception e) {
@@ -73,4 +75,18 @@ public class TodoService {
         }
         return retrieve();
     }
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
