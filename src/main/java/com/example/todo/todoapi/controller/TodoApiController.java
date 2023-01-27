@@ -28,6 +28,7 @@ public class TodoApiController {
     public ResponseEntity<?> createTodo(
             @Validated @RequestBody TodoCreateRequestDTO requestDTO
             , BindingResult result
+
     ) {
         if (result.hasErrors()) {
             log.warn("DTO 검증 에러 발생 : {}", result.getFieldError());
