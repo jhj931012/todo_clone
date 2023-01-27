@@ -20,13 +20,13 @@ class UserRepositoryTest {
     @Rollback
     void saveTest() {
         //given
-        UserEntity user = UserEntity.builder()
-                .email("abc1234@def.com")
-                .password("1234")
-                .userName("말똥이")
-                .build();
+        UserEntity userEntity = new UserEntity();
+        userEntity.setUserName("말똥이");
+        userEntity.setEmail("abc1234@def.com");
+        userEntity.setPassword("1234");
+
         //when
-        UserEntity savedUser = userRepository.save(user);
+        UserEntity savedUser = userRepository.save(userEntity);
         //then
         assertNotNull(savedUser);
     }

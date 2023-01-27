@@ -1,17 +1,19 @@
 package com.example.todo.userapi.entity;
 
+import com.example.todo.todoapi.entity.TodoEntity;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Setter @Getter @ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-@Builder
 @Entity
 @Table(name = "tbl_user")
 public class UserEntity {
@@ -33,6 +35,7 @@ public class UserEntity {
 
     @CreationTimestamp
     private LocalDateTime joinDate;
+
 }
 
 
